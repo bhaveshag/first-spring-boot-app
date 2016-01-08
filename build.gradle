@@ -9,7 +9,6 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 jar {
@@ -34,7 +33,10 @@ dependencies {
     // tag::actuator[]
     compile("org.springframework.boot:spring-boot-starter-actuator")
     // end::actuator[]
-    testCompile("junit:junit")
+   
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+   	
+    //testCompile("junit:junit")
 }
 
 task wrapper(type: Wrapper) {
